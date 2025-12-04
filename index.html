@@ -588,6 +588,13 @@
                         </div>
                     </div>
 
+                    <!-- COMMERCIAL / AD PHOTOGRAPHY ALBUM ENTRY -->
+                    <div class="photo-item" onclick="openWindow('win-commercial')">
+                        <img src="gg1.jpg.JPG" alt="Commercial Photography cover">
+                        <div class="photo-overlay">
+                            <span style="color:#fff;font-size:0.8rem;" data-i18n="album2">📸 Commercial · Ad Photography</span>
+                        </div>
+                    </div>
 
                     <!-- Placeholder -->
                     <div class="photo-item" style="border: 2px dashed rgba(255,255,255,0.2); background:transparent; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer;">
@@ -625,48 +632,35 @@
                 <br>
                 <button class="btn-glass" onclick="openWindow('win-photos')" data-i18n="backBtn">← Back to Albums</button>
             </div>
-                   <br>
-        <button class="btn-glass" onclick="openWindow('win-photos')" data-i18n="backBtn">
-            ← Back to Albums
-        </button>
-    </div>
-</div> 
-    
-    <!-- COMMERCIAL / AD PHOTOGRAPHY ALBUM ENTRY -->
-<div class="photo-item" onclick="openWindow('win-commercial')">
-    <img src="gg1.jpg.JPG" alt="Commercial Photography cover">
-    <div class="photo-overlay">
-        <span style="color:#fff;font-size:0.8rem;" data-i18n="album2">📸 Commercial · Ad Photography</span>
-    </div>
-</div>
-            <!-- 4.2 COMMERCIAL / AD PHOTOGRAPHY ALBUM WINDOW -->
-<div id="win-commercial" class="window glass-panel">
-    <div class="win-header">
-        <div class="win-title">📸 Ad_Series.album</div>
-        <div class="win-controls"><div class="win-dot close" onclick="closeWindow('win-commercial')"></div></div>
-    </div>
-    <div class="win-body">
-        <h2 class="text-gradient" data-i18n="adsHeader">Commercial / Ad Photography</h2>
-        <p style="max-width:600px;margin-bottom:20px;" data-i18n="adsIntro">
-            A small set of commercial-inspired shoots, exploring light, product focus, and mood for brand storytelling.
-        </p>
-
-        <div class="photo-grid">
-            <div class="photo-item"><img src="gg1.jpg.JPG" alt="Ad photo 1"><div class="photo-overlay"><span>gg1</span></div></div>
-            <div class="photo-item"><img src="gg2.jpg.JPG" alt="Ad photo 2"><div class="photo-overlay"><span>gg2</span></div></div>
-            <div class="photo-item"><img src="gg3.jpg.JPG" alt="Ad photo 3"><div class="photo-overlay"><span>gg3</span></div></div>
-            <div class="photo-item"><img src="gg4.jpg.JPG" alt="Ad photo 4"><div class="photo-overlay"><span>gg4</span></div></div>
         </div>
 
-        <br>
-        <button class="btn-glass" onclick="openWindow('win-photos')" data-i18n="backBtn">
-            ← Back to Albums
-        </button>
-    </div>
-</div>
+        <!-- 4.2 COMMERCIAL / AD PHOTOGRAPHY ALBUM WINDOW -->
+        <div id="win-commercial" class="window glass-panel">
+            <div class="win-header">
+                <div class="win-title">📸 Ad_Series.album</div>
+                <div class="win-controls"><div class="win-dot close" onclick="closeWindow('win-commercial')"></div></div>
+            </div>
+            <div class="win-body">
+                <h2 class="text-gradient" data-i18n="adsHeader">Commercial / Ad Photography</h2>
+                <p style="max-width:600px;margin-bottom:20px;" data-i18n="adsIntro">
+                    A small set of commercial-inspired shoots, exploring light, product focus, and mood for brand storytelling.
+                </p>
 
+                <div class="photo-grid">
+                    <div class="photo-item"><img src="gg1.jpg.JPG" alt="Ad photo 1"><div class="photo-overlay"><span>gg1</span></div></div>
+                    <div class="photo-item"><img src="gg2.jpg.JPG" alt="Ad photo 2"><div class="photo-overlay"><span>gg2</span></div></div>
+                    <div class="photo-item"><img src="gg3.jpg.JPG" alt="Ad photo 3"><div class="photo-overlay"><span>gg3</span></div></div>
+                    <div class="photo-item"><img src="gg4.jpg.JPG" alt="Ad photo 4"><div class="photo-overlay"><span>gg4</span></div></div>
+                </div>
+
+                <br>
+                <button class="btn-glass" onclick="openWindow('win-photos')" data-i18n="backBtn">
+                    ← Back to Albums
+                </button>
+            </div>
         </div>
 
+        
         <!-- 5. JOURNAL WINDOW -->
         <div id="win-journal" class="window glass-panel">
             <div class="win-header">
@@ -734,10 +728,9 @@
             const allDock = document.querySelectorAll('.dock-icon');
             
             // Map window ID to dock ID
-            let dockId = 'dock-home';
             if(id === 'win-journey') dockId = 'dock-journey';
             if(id === 'win-projects') dockId = 'dock-projects';
-            if(id === 'win-photos' || id === 'win-shantou') dockId = 'dock-photos';
+            if(id === 'win-photos' || id === 'win-shantou' || id === 'win-commercial') dockId = 'dock-photos';
             if(id === 'win-journal') dockId = 'dock-journal';
             
             const targetDock = document.getElementById(dockId);
